@@ -21,7 +21,11 @@ jobs:
         cache: 'maven'
     
     - name: Build with Maven
-      run: mvn -B package
+      run: |
+        cd desafio-profissional/7sem/CRUD-PADRAO-JAVASPRING/demo
+        mvn -B package
       
     - name: Run Tests
-      run: mvn test
+      run: |
+        cd desafio-profissional/7sem/CRUD-PADRAO-JAVASPRING/demo
+        mvn test
